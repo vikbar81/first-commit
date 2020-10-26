@@ -1,0 +1,78 @@
+
+
+https://github.com/vikbar81/first-commit.git
+
+mkdir first-commit
+cd first commit
+git init
+ls -lash
+
+
+#CREAR ARCHIVO README
+echo "#Mi repositorio de prueba" >> README.md
+
+#CONFIGURAR USUARIO
+git config --global user.name "vikbar81"
+
+#VALIDAR USUARIO
+git config --global user.name
+
+#CONFIGURAR EMAIL
+git config --global user.email "victorbarrera@gmail.com"
+
+#VALIDAR EMAIL
+git config --global user.email
+
+
+
+#AGREGAR ARCHIVO AL "STAGING"
+git add README.md
+git commit -m "Mi primer commit"
+
+
+#CONFIGURAR REPOSITORIO DE ORIGEN
+git remote add origin https://github.com/vikbar81/first-commit.git
+
+#SE ENVIA EL ARCHIVO DESDE EL EQUIPO LOCAL AL REPOSITORIO EN GIT 
+git push -u origin master
+
+
+#CREAR UN NUEVO BRANCH
+git branch #branch actual
+git checkout -b "development" #se crea el branch de nombre "development"
+
+#
+mkdir scripts
+cd scripts
+vi hello.sh #para guardar "CTLR+C :X <ENTER>"
+chmod a+x hello.sh #se dan permisos de ejecucion
+./hello.sh
+git status
+
+
+git add . # se pasa todo al "staging"
+git commit -m "agregando el archivo hello.sh" #se confirma pasar todo el "staging"
+
+
+#CLONAR UN REPOSITORIO
+rm -rf first-commit #se borra el directorio first-commit para luego clonarlo de GitHub
+git clone https://github.com/vikbar81/first-commit.git #clona todo el repositorio de origen en equipo local
+
+#FUSIONAR EL BRANCH DEVELOPMENT CON MASTER
+cd first-commit
+ls
+git checkout development
+ls
+git merge development 
+
+git add .
+git commit -m .gitignore
+git commit -m "creacion archivo .gitignore"
+git push origin master
+
+
+
+
+
+
+
