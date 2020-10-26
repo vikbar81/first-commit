@@ -52,6 +52,7 @@ git status
 
 git add . # se pasa todo al "staging"
 git commit -m "agregando el archivo hello.sh" #se confirma pasar todo el "staging"
+git push origin development
 
 
 #CLONAR UN REPOSITORIO
@@ -68,7 +69,7 @@ git merge development
 git add .
 git commit -m .gitignore
 git commit -m "creacion archivo .gitignore"
-git push origin master
+git push origin development
 
 
 
